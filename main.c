@@ -4,7 +4,7 @@
 
 int main ( int argc, char** argv )
 {
-    int nombreMystere = 0, nombreEntre = 0;
+    int nombreMystere = 0, nombreEntre = 0,compteur = 0;
     const int MAX = 100, MIN = 1;
 
     // Génération du nombre aléatoire
@@ -19,6 +19,8 @@ int main ( int argc, char** argv )
         // On demande le nombre
         printf("Quel est le nombre ? ");
         scanf("%d", &nombreEntre);
+        compteur++;
+
 
         // On compare le nombre entré avec le nombre mystère
 
@@ -27,7 +29,7 @@ int main ( int argc, char** argv )
         else if (nombreMystere < nombreEntre)
             printf("C'est moins !\n\n");
         else
-            printf ("Bravo, vous avez trouve le nombre mystere !!!\n\n");
+            printf ("Bravo, vous avez trouve le nombre mystere en %d coups !!!\n\n",compteur);
     } while (nombreEntre != nombreMystere);
 
     return 0;
