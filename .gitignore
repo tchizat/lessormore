@@ -25,3 +25,4 @@ Debug Files
 *.dSYM/
 Bin/
 *.cbp
+*.layout

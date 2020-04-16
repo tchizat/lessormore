@@ -14,7 +14,7 @@ int main ( int argc, char** argv )
 while(nouvellepartie)
 {
 
-   printf("Bonjour bienvenue sur le jeu du plus ou moins !\n\n");
+   printf("\n Bonjour, bienvenue sur le jeu du nombre mystere !\n\n");
    printf("Entrez le nombre de joueur");
    scanf("%d",&nombredejoueur);
 // mode un joueur
@@ -45,6 +45,7 @@ while(nouvellepartie)
    {
        printf("Joueur 1 tapez le nombre a deviner");
        scanf("%d",&nombreadeviner);
+       printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
 
        do
     {
@@ -62,11 +63,19 @@ while(nouvellepartie)
 
             printf ("Voulez vous faire une nouvelle partie? (tapez 1 pour oui 0 pour non");
             scanf("%d", & nouvellepartie);
+            if(nouvellepartie==1)
+            {
+               printf("C'est reparti pour un tour !!");
+            }
+            else
+            {
+                printf("Merci d'avoir jouer au nombre mystere  ! \n A bientot !");
+            }
    }
 
    else
    {
-       printf("Ceci n'est pas un nombre !");
+       printf("Vous ne pouvez jouer qu'a un ou deux joueur... !\n");
    }
 }
     return 0;
