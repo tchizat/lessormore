@@ -1,0 +1,26 @@
+# Prerequisites
+
+*.d
+
+#Object files
+
+*.o
+*.ko
+*.obj
+*.elf
+
+#Precompiled Headers
+*.gch
+*.pch
+
+# Librairies
+*.lib
+
+#Executable
+*.exe
+
+Debug Files
+
+*.dSYM/
+Bin/
+*.cbp
