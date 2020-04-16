@@ -12,17 +12,20 @@ int main ( int argc, char** argv )
     srand(time(NULL));
     nombreMystere = (rand() % (MAX - MIN + 1)) + MIN;
 
-    /* La boucle du programme. Elle se rŽpte tant que l'utilisateur n'a pas trouvŽ le nombre mystre */
+    int nouvellepartie=1;
 
-    do
+while(nouvellepartie)
+{
+do
     {
-        // On demande le nombre
+
         printf("Quel est le nombre ? ");
         scanf("%d", &nombreEntre);
+
         compteur++;
 
 
-        // On compare le nombre entrŽ avec le nombre mystre
+
 
         if (nombreMystere > nombreEntre)
             printf("C'est plus !\n\n");
@@ -30,7 +33,11 @@ int main ( int argc, char** argv )
             printf("C'est moins !\n\n");
         else
             printf ("Bravo, vous avez trouve le nombre mystere en %d coups !!!\n\n",compteur);
+
     } while (nombreEntre != nombreMystere);
 
+            printf ("Voulez vous faire une nouvelle partie? (tapez 1 pour oui 0 pour non");
+            scanf("%d", & nouvellepartie);
+}
     return 0;
 }
