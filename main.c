@@ -4,27 +4,45 @@
 
 int main ( int argc, char** argv )
 {
-
-
-    int nombreMystere = 0, nombreEntre = 0,compteur = 0, nombredejoueur=0;
-    int nombreadeviner=0;
-    int nouvellepartie=1;
-    const int MAX = 100, MIN = 1;
+    int nombreMystere = 0, nombreEntre = 0,compteur = 0, nombredejoueur=0,nombreadeviner=0,nouvellepartie=2,difficulte=2;
+    int max = 100;
+    const int MIN = 1;
 // Boucle pour la nouvelle partie
-while(nouvellepartie)
-{
+    while(nouvellepartie)
+    {
 
    printf("\n Bonjour, bienvenue sur le jeu du nombre mystere !\n\n");
-   printf("Entrez le nombre de joueur");
+   printf("Combien de joueur etes vous?");
    scanf("%d",&nombredejoueur);
 // mode un joueur
    if(nombredejoueur==1)
    {
     srand(time(NULL));
-    nombreMystere = (rand() % (MAX - MIN + 1)) + MIN;
+//selection de la difficulte
 
+   printf("Choissisez le mode de difficulte.\n");
+   printf("1 entre 1 et 100\n 2 Entre 1 et 1000 \n 3 Entre1 et 10000.\n") ;
+   scanf("%d",&difficulte);
+
+       switch (difficulte)
+       {
+     case 1:
+        max=100;
+        break;
+    case 2:
+        max=1000;
+        break;
+    case 3:
+        max=10000;
+        break;
+    default:
+      printf("niveau par defaut selectionne.");
+      max=1000;
+       }
      do
        {
+     nombreMystere = (rand() % (max - MIN + 1)) + MIN;
+
         printf("Quel est le nombre ? ");
         scanf("%d", &nombreEntre);
         compteur++;
